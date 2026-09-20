@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dr Dordis Dental Hub | Dentist &amp; Prosthodontic Care in Vesu, Surat</title>
+<meta name="description" content="Personalized dental and prosthodontic care by Dr. Jehan Dordi (B.D.S., M.D.S., F.A.G.E.) at Dr Dordis Dental Hub in Vesu, Surat.">
+<meta property="og:title" content="Dr Dordis Dental Hub | Dentist in Vesu, Surat">
+<meta property="og:description" content="Advanced, personalized dental and prosthodontic care in a modern clinical environment in Vesu, Surat.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#14284b;
+  --navy-2:#1f3a66;
+  --sage:#7f9c8a;
+  --sage-d:#4f6f5c;
+  --sage-l:#e3ebe5;
+  --ivory:#faf7f0;
+  --sand:#e9dfcb;
+  --ink:#1b2437;
+  --muted:#5a6579;
+  --line:#ddd5c3;
+  --white:#fff;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --radius:18px;
+}
+@media (prefers-color-scheme: dark){
+  /* Keep the clinic look consistent; no dark theme */
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video,iframe{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0;color:var(--navy);letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,5.6vw,4.3rem)}
+h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:.6em}
+h3{font-size:1.25rem}
+p{margin:0 0 1em;max-width:62ch}
+:focus-visible{outline:3px solid var(--sage-d);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:clamp(56px,9vw,110px) 0}
+.sub{color:var(--sage-d);font-weight:500;margin-bottom:.6em;font-size:.95rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:.8em 1.4em;border-radius:999px;font-weight:600;font-size:.95rem;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .2s,color .2s,border-color .2s;font-family:var(--sans)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-wa{background:#1f9d55;color:#fff}
+.btn-wa:hover{background:#178446}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);color:var(--navy);line-height:1.05}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand b{display:block;font-size:1.1rem;font-weight:600}
+.brand span{font-size:.85rem;color:var(--sage-d)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem;font-weight:500}
+nav a:hover{color:var(--sage-d)}
+.nav-cta{display:flex;gap:8px}
+.nav-cta .btn{padding:.55em 1.1em;font-size:.88rem}
+.burger{display:none;background:none;border:1.5px solid var(--navy);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--navy)}
+.burger svg{width:22px;height:22px;margin:auto}
+.drawer{display:none}
+@media (max-width:1020px){
+  nav,.nav-cta{display:none}
+  .burger{display:grid;place-items:center}
+  .drawer{position:fixed;inset:72px 0 0 0;background:var(--ivory);padding:24px 20px;z-index:49;overflow:auto}
+  .drawer.open{display:block}
+  .drawer a.l{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:1.3rem;color:var(--navy)}
+  .drawer .btns{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+}
+
+/* Hero */
+.hero{padding-top:clamp(36px,6vw,72px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.credit{display:inline-block;background:var(--sage-l);color:var(--sage-d);padding:.4em 1em;border-radius:999px;font-size:.85rem;font-weight:500;margin-bottom:1.4em}
+.hero h1 span{display:block;color:var(--sage-d)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);margin:1.2em 0 1.8em}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.chips{display:flex;gap:18px;flex-wrap:wrap;margin-top:1.8em;color:var(--muted);font-size:.9rem}
+.chips i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sage);margin-right:8px}
+.video-card{position:relative;border-radius:28px;overflow:hidden;background:var(--navy);aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(20,40,75,.45)}
+.video-card video{width:100%;height:100%;object-fit:cover}
+.video-card figcaption{position:absolute;left:16px;bottom:16px;background:rgba(250,247,240,.92);padding:.5em 1em;border-radius:999px;font-size:.85rem;font-weight:500;color:var(--navy)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.video-card{aspect-ratio:4/3}}
+
+/* Doctor */
+.doctor{background:var(--white)}
+.doc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:center}
+.portrait{position:relative}
+.portrait img{width:100%;border-radius:28px;aspect-ratio:4/5;object-fit:cover;background:var(--sand)}
+.portrait .tag{position:absolute;right:-10px;bottom:24px;background:var(--navy);color:#fff;padding:14px 18px;border-radius:16px;max-width:260px;font-size:.85rem;line-height:1.4;box-shadow:0 12px 30px -12px rgba(20,40,75,.6)}
+.portrait .tag b{display:block;font-family:var(--serif);font-weight:500;font-size:1rem;margin-bottom:2px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.6em}
+.pillars div{border-left:3px solid var(--sage);padding:.2em 0 .2em 16px}
+.pillars h3{font-size:1.05rem;margin-bottom:.3em}
+.pillars p{font-size:.93rem;color:var(--muted);margin:0}
+@media (max-width:860px){.doc-grid{grid-template-columns:1fr}.portrait .tag{right:12px}.pillars{grid-template-columns:1fr}}
+
+/* Clinic */
+.clinic{background:var(--navy);color:#e8edf6}
+.clinic h2{color:#fff}
+.clinic-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.clinic .btn-ghost{border-color:#fff;color:#fff}
+.clinic .btn-ghost:hover{background:#fff;color:var(--navy)}
+.clinic .btn-primary{background:var(--sage);color:var(--navy)}
+.clinic .btn-primary:hover{background:#94b09f}
+.clinic .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.4em}
+.clinic-video{border-radius:24px;overflow:hidden;aspect-ratio:16/10;background:#0c1a33}
+.clinic-video video{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.clinic-grid{grid-template-columns:1fr}}
+
+/* Prosthodontics */
+.pros-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.pros-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.pros-list li{display:flex;gap:12px;align-items:center;padding:14px 18px;background:var(--white);border:1px solid var(--line);border-radius:14px;font-weight:500;color:var(--navy)}
+.pros-list svg{width:20px;height:20px;color:var(--sage-d);flex:none}
+@media (max-width:860px){.pros-grid{grid-template-columns:1fr}}
+
+/* Treatments */
+.treat{background:var(--sand)}
+.treat-head{max-width:640px;margin-bottom:2em}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.tcard{all:unset;box-sizing:border-box;cursor:pointer;background:var(--ivory);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:6px;min-height:118px;transition:border-color .2s,transform .2s,box-shadow .2s}
+.tcard:hover{border-color:var(--sage-d);transform:translateY(-2px);box-shadow:0 14px 28px -18px rgba(20,40,75,.45)}
+.tcard:focus-visible{outline:3px solid var(--sage-d);outline-offset:3px}
+.tcard strong{font-family:var(--serif);font-weight:500;font-size:1.15rem;color:var(--navy)}
+.tcard span{font-size:.85rem;color:var(--sage-d)}
+.disc{font-size:.85rem;color:var(--muted);margin-top:1.6em}
+
+dialog{border:none;border-radius:24px;padding:0;width:min(640px,100% - 32px);background:var(--ivory);color:var(--ink);box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(20,40,75,.55);backdrop-filter:blur(3px)}
+.dlg-body{padding:28px}
+.dlg-body h3{font-size:1.7rem;margin-bottom:.5em}
+.dlg-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:1.2rem;color:var(--navy)}
+.viz{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:14px;margin:1.2em 0}
+.viz svg{width:100%;height:auto}
+.viz small{display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem;padding:0 6px}
+.gum{fill:#f0b9b0}
+.t{fill:#fff;stroke:#c9c2b0;stroke-width:1.5}
+.t.stain{fill:#e2cf8f}
+.t.dark{fill:#b89a6a}
+.ghost{fill:none;stroke:var(--sage-d);stroke-width:1.6;stroke-dasharray:5 4}
+.metal{fill:#9aa5b8;stroke:#6c7891;stroke-width:1}
+.rc{stroke-width:4;stroke-linecap:round;fill:none}
+.a{animation:fadeA 5s ease-in-out infinite}
+.b{animation:fadeB 5s ease-in-out infinite}
+@keyframes fadeA{0%,38%{opacity:1}52%,92%{opacity:0}100%{opacity:1}}
+@keyframes fadeB{0%,38%{opacity:0}52%,92%{opacity:1}100%{opacity:0}}
+.whiten{animation:whiten 5s ease-in-out infinite}
+@keyframes whiten{0%,38%{fill:#e2cf8f}52%,92%{fill:#fff}100%{fill:#e2cf8f}}
+.drop{animation:drop 5s ease-in-out infinite}
+@keyframes drop{0%,38%{opacity:0;transform:translateY(-18px)}52%,92%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-18px)}}
+
+/* Before/after */
+.results{background:var(--white)}
+.ba{position:relative;width:min(900px,100%);aspect-ratio:16/10;margin:1.6em 0 1em;border-radius:24px;overflow:hidden;background:var(--sand);user-select:none;touch-action:pan-y;--pos:50%}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(20,40,75,.2);pointer-events:none}
+.ba .knob{position:absolute;top:50%;left:var(--pos);width:48px;height:48px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);display:grid;place-items:center;color:var(--navy);font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.3);pointer-events:none}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba input:focus-visible + .line{outline:3px solid var(--sage-d)}
+.ba .lab{position:absolute;bottom:14px;background:rgba(20,40,75,.85);color:#fff;padding:.3em .9em;border-radius:999px;font-size:.8rem;font-weight:500;pointer-events:none}
+.ba .lab.l{left:14px}.ba .lab.r{right:14px}
+
+/* Why */
+.why-list{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:2em}
+.why-list article{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:22px 18px}
+.why-list .n{font-family:var(--serif);color:var(--sage-d);font-size:1.6rem;margin-bottom:.4em;display:block}
+.why-list h3{font-size:1.05rem;margin-bottom:.4em}
+.why-list p{font-size:.88rem;color:var(--muted);margin:0}
+@media (max-width:1020px){.why-list{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.why-list{grid-template-columns:1fr}}
+
+/* Reviews */
+.reviews{background:var(--white)}
+.score{display:flex;align-items:center;gap:18px;margin-bottom:1.6em;flex-wrap:wrap}
+.score b{font-family:var(--serif);font-size:3.4rem;line-height:1;color:var(--navy);font-weight:500}
+.stars{color:#e0a21b;letter-spacing:3px;font-size:1.2rem}
+.score small{display:block;color:var(--muted)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.rcard{display:flex;flex-direction:column;gap:14px;background:var(--ivory);border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:border-color .2s}
+.rcard:hover{border-color:var(--sage-d)}
+.rcard q{font-family:var(--serif);font-size:1.08rem;line-height:1.5;color:var(--navy);quotes:none}
+.rcard footer{all:unset;display:flex;align-items:center;gap:10px;margin-top:auto;font-size:.85rem;color:var(--muted)}
+.av{width:36px;height:36px;border-radius:50%;background:var(--sage-l);color:var(--sage-d);display:grid;place-items:center;font-weight:600}
+.rcard footer b{display:block;color:var(--ink)}
+.testis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:2.2em 0}
+.testis blockquote{margin:0;padding:18px 20px;border-left:3px solid var(--sage);background:var(--sage-l);border-radius:0 14px 14px 0;font-size:.95rem}
+.testis cite{display:block;margin-top:.6em;font-size:.82rem;color:var(--sage-d);font-style:normal}
+.rlinks{display:flex;gap:12px;flex-wrap:wrap}
+.rlinks a{flex:1 1 280px;border:1.5px solid var(--navy);border-radius:var(--radius);padding:18px 20px;color:var(--navy)}
+.rlinks a:hover{background:var(--navy);color:#fff}
+.rlinks a:hover span{color:#dbe3f2}
+.rlinks b{display:block;font-family:var(--serif);font-weight:500;font-size:1.1rem}
+.rlinks span{font-size:.88rem;color:var(--muted)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px)}
+.info{display:grid;gap:22px;margin-top:1.4em}
+.info h3{font-size:1rem;color:var(--sage-d);margin-bottom:.3em;font-family:var(--sans);font-weight:600}
+.info p{margin:0}
+.info a.tel{font-family:var(--serif);font-size:1.6rem;color:var(--navy)}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:380px;border:0}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+
+/* Footer */
+footer.site{background:var(--navy);color:#cbd5e6;padding:56px 0 calc(90px + env(safe-area-inset-bottom,0px))}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px}
+footer.site h3,footer.site h4{color:#fff;margin:0 0 .6em}
+footer.site h4{font-family:var(--serif);font-weight:500;font-size:1.05rem}
+footer.site ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.92rem}
+footer.site a:hover{color:#fff}
+.copy{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.82rem;color:#9fb0cc}
+@media (max-width:760px){.f-grid{grid-template-columns:1fr}}
+
+/* Floating */
+.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-direction:column;gap:10px}
+.float a{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.float a svg{width:26px;height:26px}
+.float .wa{background:#1f9d55}
+.float .ph{background:var(--navy)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .a,.b,.whiten,.drop{animation:none}
+  .a{opacity:0}.b{opacity:1}.whiten{fill:#fff}.drop{opacity:1}
+  .tcard,.btn{transition:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Dr Dordi's Dental Hub home">
+      <img src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/e0ec9991-5d08-450b-899e-1791cf6a4dc8/logo.png" alt="" width="40" height="40">
+      <div><b>Dr Dordi's</b><span>Dental Hub</span></div>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#doctor">About Dr. Dordi</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#results">Before &amp; After</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#clinic">Clinic</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-wa" href="https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.">WhatsApp</a>
+      <a class="btn btn-primary" href="tel:+919587726969">Call Now</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <a class="l" href="#home">Home</a>
+  <a class="l" href="#doctor">About Dr. Dordi</a>
+  <a class="l" href="#treatments">Treatments</a>
+  <a class="l" href="#results">Before &amp; After</a>
+  <a class="l" href="#reviews">Reviews</a>
+  <a class="l" href="#clinic">Clinic</a>
+  <a class="l" href="#contact">Contact</a>
+  <div class="btns">
+    <a class="btn btn-wa" href="https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.">WhatsApp</a>
+    <a class="btn btn-primary" href="tel:+919587726969">Call Now</a>
+  </div>
+</div>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="credit">Dr. Jehan Dordi · B.D.S., M.D.S., F.A.G.E. · Gold Medalist</span>
+      <h1>Advanced Dental Care. <span>Confident Smiles.</span></h1>
+      <p class="lead">Personalized dental and prosthodontic care in a modern clinical environment in Vesu, Surat.</p>
+      <div class="row">
+        <a class="btn btn-wa" href="https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.">WhatsApp</a>
+        <a class="btn btn-primary" href="tel:+919587726969">Call Now</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div class="chips"><span><i></i>Specialist prosthodontic care</span><span><i></i>Modern clinical environment</span></div>
+    </div>
+    <figure class="video-card" style="margin:0">
+      <video src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/04c04b52-b10c-4208-8b6d-e8644cdb89d9/clinic-tour.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Video tour of the clinic"></video>
+      <figcaption>Inside Dr Dordis Dental Hub</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ DOCTOR ============ -->
+<section class="doctor" id="doctor">
+  <div class="wrap doc-grid">
+    <div class="portrait">
+      <img src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/d8f5cd8e-00d8-4314-aa80-bfde43e19b39/dr-jehan-dordi.jpg" alt="Portrait of Dr. Jehan Dordi" loading="lazy">
+      <div class="tag"><b>MDS Prosthodontics</b>Crown &amp; Bridge · Oral Implantology<br>B.D.S., M.D.S., F.A.G.E. · Gold Medalist</div>
+    </div>
+    <div>
+      <p class="sub">About the dentist</p>
+      <h2>Meet Dr. Jehan Dordi</h2>
+      <p>Dr. Jehan Dordi (B.D.S., M.D.S., F.A.G.E., Gold Medalist) brings a patient-centric approach to dental and prosthodontic care—taking time to understand each concern, explain the available options clearly, and plan treatment around long-term comfort, function and aesthetics.</p>
+      <div class="pillars">
+        <div><h3>Thoughtful planning</h3><p>Every recommendation begins with careful assessment and a clear conversation.</p></div>
+        <div><h3>Personalized care</h3><p>Treatment choices are considered around individual needs, comfort and priorities.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLINIC ============ -->
+<section class="clinic" id="clinic">
+  <div class="wrap clinic-grid">
+    <div>
+      <p class="sub" style="color:#a9c3b3">Dr Dordis Dental Hub</p>
+      <h2>A modern clinical space designed around your comfort.</h2>
+      <p>From the welcome area to the treatment suite, the clinic brings together a calm atmosphere, contemporary equipment and a thoughtful care experience.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn-ghost" href="tel:+919587726969">Call Now</a>
+      </div>
+    </div>
+    <div class="clinic-video">
+      <video src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/04c04b52-b10c-4208-8b6d-e8644cdb89d9/clinic-tour.mp4" controls muted playsinline preload="none" aria-label="Clinic tour video"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROSTHODONTICS ============ -->
+<section id="prosthodontics">
+  <div class="wrap pros-grid">
+    <div>
+      <p class="sub">Specialist focus</p>
+      <h2>Prosthodontic expertise</h2>
+      <p>Prosthodontics focuses on restoring and replacing damaged or missing teeth—helping rebuild a smile's appearance, comfort and function.</p>
+      <p>This may include crowns, bridges, dentures, implant-supported restorations and carefully coordinated full-mouth rehabilitation. Dr. Dordi approaches complex needs in clear, patient-friendly steps.</p>
+    </div>
+    <ul class="pros-list">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Crowns and bridges</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Implant-supported restorations</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Complete and partial dentures</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Coordinated full-mouth rehabilitation</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TREATMENTS ============ -->
+<section class="treat" id="treatments">
+  <div class="wrap">
+    <div class="treat-head">
+      <p class="sub">Treatments</p>
+      <h2>Care for function, health and aesthetics</h2>
+      <p>Explore treatments available at Dr Dordis Dental Hub. Open any treatment for a concise overview and treatment visualization.</p>
+    </div>
+    <div class="tgrid" id="tgrid"></div>
+    <p class="disc">Animated treatment visuals are for general education. Your dentist will explain the approach suitable for your individual needs.</p>
+  </div>
+</section>
+
+<dialog id="tdlg" aria-labelledby="tdlg-title">
+  <button class="dlg-close" id="tclose" aria-label="Close">&times;</button>
+  <div class="dlg-body">
+    <h3 id="tdlg-title"></h3>
+    <p id="tdlg-text"></p>
+    <div class="viz" id="tdlg-viz"></div>
+    <a class="btn btn-primary" href="tel:+919587726969">Call to book a consultation</a>
+  </div>
+</dialog>
+
+<!-- ============ BEFORE & AFTER ============ -->
+<section class="results" id="results">
+  <div class="wrap">
+    <p class="sub">Smile transformations</p>
+    <h2>Before &amp; after</h2>
+    <p>Move the slider to compare an illustrative treatment outcome.</p>
+    <div class="ba" id="ba">
+      <img src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/425dfe8f-3f24-4a67-9ed2-0c8497f4e985/smile-before.jpg" alt="Illustrative smile before treatment" loading="lazy">
+      <img class="after" src="https://happy-mouth-intro.lovable.app/__l5e/assets-v1/4c2e1ec8-36ad-44c0-9856-a26f0a41723a/smile-after.jpg" alt="Illustrative smile after treatment" loading="lazy">
+      <span class="lab l">Before</span><span class="lab r">After</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Compare before and after" id="baRange">
+      <div class="line"></div>
+      <div class="knob" aria-hidden="true">&harr;</div>
+    </div>
+    <p class="disc">Illustrative visualization. Individual results may vary depending on treatment needs.</p>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why">
+  <div class="wrap">
+    <p class="sub">Our approach</p>
+    <h2>Why Dr Dordis Dental Hub</h2>
+    <div class="why-list">
+      <article><span class="n">1</span><h3>Personalized Dental Care</h3><p>Plans shaped around your needs and priorities.</p></article>
+      <article><span class="n">2</span><h3>Prosthodontic Expertise</h3><p>Specialist training in restoring and replacing teeth.</p></article>
+      <article><span class="n">3</span><h3>Modern Clinical Environment</h3><p>Contemporary equipment in a calm, clean space.</p></article>
+      <article><span class="n">4</span><h3>Patient-Focused Approach</h3><p>Clear explanations and time for your questions.</p></article>
+      <article><span class="n">5</span><h3>Comfortable Dental Experiences</h3><p>Care designed to keep visits relaxed.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <p class="sub">Google Reviews</p>
+    <h2>Google Reviews From Our Patients</h2>
+    <div class="score">
+      <b>5.0</b>
+      <div><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><small>Based on 139 Google reviews</small></div>
+    </div>
+    <p class="disc" style="margin-top:0">Reviews published independently by patients on Google. Tap any review to read it on Google Maps.</p>
+
+    <div class="rgrid">
+      <a class="rcard" href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener">
+        <q>Consultation, 3D imaging and implant placement felt stress-free and virtually painless.</q>
+        <footer><span class="av">Z</span><span><b>Zarvan Besania</b>Google · a week ago</span></footer>
+      </a>
+      <a class="rcard" href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener">
+        <q>Smooth, painless implant treatment; everything was explained clearly and the staff were caring.</q>
+        <footer><span class="av">A</span><span><b>Amit Deora</b>Google · 3 months ago</span></footer>
+      </a>
+      <a class="rcard" href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener">
+        <q>Skilled, reliable and well-equipped. Two of my family members were treated here.</q>
+        <footer><span class="av">N</span><span><b>Neel Singapuri</b>Google · 3 years ago</span></footer>
+      </a>
+      <a class="rcard" href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener">
+        <q>My kids used to fear the dentist, but they enjoy coming here now.</q>
+        <footer><span class="av">K</span><span><b>Koo koo pet shop</b>Google · 2 years ago</span></footer>
+      </a>
+      <a class="rcard" href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener">
+        <q>Gentle hands. Very pleased with my root canal and implant care.</q>
+        <footer><span class="av">U</span><span><b>Umair Parkar</b>Google · 4 years ago</span></footer>
+      </a>
+    </div>
+
+    <p class="sub" style="margin-top:2.4em">Patient testimonials</p>
+    <p style="margin:0">Feedback shared directly with Dr Dordi's Dental Hub.</p>
+    <div class="testis">
+      <blockquote>“I had a good experience at the clinic. The staff were friendly and explained the treatment clearly.”<cite>Patient testimonial</cite></blockquote>
+      <blockquote>“The clinic was clean and the dentist took time to answer my questions.”<cite>Patient testimonial</cite></blockquote>
+      <blockquote>“I'm happy with my treatment and appreciated the professional service.”<cite>Patient testimonial</cite></blockquote>
+    </div>
+
+    <div class="rlinks">
+      <a href="https://maps.google.com/?cid=5652281608771261904" target="_blank" rel="noopener"><b>View Google Reviews</b><span>See all 139 ratings and reviews on Google.</span></a>
+      <a href="https://www.google.com/maps/place/Dr.+Dordi%27s+Dental+Hub/data=!4m3!3m2!1s0x3be053ec23cdbfcb:0x4e70f02d1548d5d0!12e1?laa=lu-desktop-review-solicitation" target="_blank" rel="noopener"><b>Leave a Review</b><span>Share your experience with Dr Dordi's Dental Hub.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="sub">Vesu, Surat</p>
+      <h2>Visit Dr Dordis Dental Hub</h2>
+      <div class="info">
+        <div><h3>Clinic address</h3><p>1st Floor, Highfield Ascot, 105, VIP Rd, Beside International Finance Centre, Opposite Palm Avenue, Vesu, Surat, Gujarat 395007, India</p></div>
+        <div><h3>Direct contact</h3><a class="tel" href="tel:+919587726969">+91 95877 26969</a></div>
+        <div><h3>Clinic hours</h3><p>Monday – Saturday: 10:00 AM – 8:00 PM<br>Sunday: Closed</p></div>
+      </div>
+      <div class="hero" style="padding:0;margin-top:1.6em"><div class="row" style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="tel:+919587726969">Call Now</a>
+        <a class="btn btn-wa" href="https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments.">WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Dr+Dordi's+Dental+Hub,1st+Floor,Highfield+Ascot,105+VIP+Rd,Vesu,Surat,Gujarat+395007,India" target="_blank" rel="noopener">Get Directions</a>
+      </div></div>
+    </div>
+    <div class="map">
+      <iframe title="Map to Dr Dordi's Dental Hub" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Dr+Dordi%27s+Dental+Hub,+Highfield+Ascot,+VIP+Road,+Vesu,+Surat,+Gujarat+395007&amp;output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h3 style="font-size:1.4rem">Dr Dordi's Dental Hub</h3>
+        <p>Personalized dental and prosthodontic care in Vesu, Surat.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#doctor">About Dr. Dordi</a></li>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#results">Before &amp; After</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#clinic">Clinic</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Need urgent dental guidance?</h4>
+        <p>Call the clinic directly to describe your concern and confirm availability.</p>
+        <a href="tel:+919587726969" style="font-family:var(--serif);font-size:1.3rem;color:#fff">+91 95877 26969</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Dr Dordis Dental Hub. Clinical information is general and does not replace an individual dental assessment.</p>
+  </div>
+</footer>
+
+<!-- Floating actions -->
+<div class="float">
+  <a class="wa" href="https://wa.me/919587726969?text=Hello%20Dr.%20Dordi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20dental%20treatments." aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+  </a>
+  <a class="ph" href="tel:+919587726969" aria-label="Call the clinic">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+</div>
+
+<script>
+/* ---------- Mobile drawer ---------- */
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('drawer');
+burger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+drawer.addEventListener('click', e => {
+  if (e.target.closest('a')) { drawer.classList.remove('open'); burger.setAttribute('aria-expanded', false); document.body.style.overflow = ''; }
+});
+
+/* ---------- Treatment visuals (simple educational animations) ---------- */
+const TOOTH = 'M0 10C0 -4 26 -4 26 10C26 26 22 40 18 52C16 58 10 58 8 52C4 40 0 26 0 10Z';
+const X = [18, 66, 114, 162, 210];
+const tooth = (i, cls = 't', extra = '') => `<path class="${cls}" ${extra} transform="translate(${X[i]} 12)" d="${TOOTH}"/>`;
+const ghost = i => `<path class="ghost" transform="translate(${X[i]} 12)" d="${TOOTH}"/>`;
+const wrap = inner => `<svg viewBox="0 0 260 96" role="img" aria-hidden="true"><path class="gum" d="M0 70h260v26H0z" opacity=".55"/>${inner}</svg><small><span>Before</span><span>After</span></small>`;
+const row = (skip = [], cls = 't') => X.map((_, i) => skip.includes(i) ? '' : tooth(i, cls)).join('');
+
+const VIZ = {
+  implant: () => wrap(row([2]) + `<g class="a">${ghost(2)}</g><g class="b"><rect class="metal" x="123" y="66" width="8" height="26" rx="2"/><path d="M121 72h12M121 78h12M121 84h12" stroke="#6c7891"/>${tooth(2, 't drop')}</g>`),
+  whitening: () => wrap(X.map((_, i) => tooth(i, 't whiten')).join('')),
+  crown: () => wrap(row([2]) + `<g class="a">${tooth(2, 't dark')}</g><g class="b">${tooth(2, 't', 'stroke="#4f6f5c" style="stroke-width:2.5"')}</g>`),
+  filling: () => wrap(row([2]) + `${tooth(2)}<circle class="a" cx="131" cy="30" r="6" fill="#5b4a33"/><circle class="b" cx="131" cy="30" r="6" fill="#fff" stroke="#c9c2b0"/>`),
+  veneer: () => wrap(row([2]) + `<g class="a">${tooth(2, 't stain')}</g><g class="b">${tooth(2, 't', 'stroke="#4f6f5c" style="stroke-width:2.5"')}</g>`),
+  rootcanal: () => wrap(row([2]) + `${tooth(2)}<path class="rc a" d="M131 24v34" stroke="#d0524a"/><path class="rc b" d="M131 24v34" stroke="#4f6f5c"/>`),
+  dentures: () => wrap(row([1,2,3]) + `<g class="a">${ghost(1)}${ghost(2)}${ghost(3)}</g><g class="b">${tooth(1)}${tooth(2)}${tooth(3)}</g>`),
+  makeover: () => wrap(`<g class="a">${X.map((x, i) => `<path class="t stain" transform="translate(${x} ${[18,8,20,10,22][i]}) rotate(${[-6,5,-4,6,-5][i]} 13 28)" d="${TOOTH}"/>`).join('')}</g><g class="b">${X.map((_, i) => tooth(i)).join('')}</g>`),
+  preventive: () => wrap(row() + `<g class="a"><circle cx="30" cy="30" r="3" fill="#b89a6a"/><circle cx="126" cy="34" r="3" fill="#b89a6a"/><circle cx="174" cy="28" r="3" fill="#b89a6a"/></g><g class="b"><path d="M60 14l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#7f9c8a"/><path d="M200 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#7f9c8a"/></g>`),
+  prostho: () => wrap(row([2]) + `<g class="a">${ghost(2)}</g><g class="b">${tooth(2, 't', 'stroke="#4f6f5c" style="stroke-width:2.5"')}<path d="M79 22h60M139 22h48" stroke="#4f6f5c" stroke-width="3" stroke-linecap="round"/></g>`)
+};
+
+const TREATMENTS = [
+  { t: 'Dental Implants', v: 'implant', d: 'A titanium post is placed in the jawbone to support a replacement tooth, restoring chewing function and appearance. Suitability is confirmed after examination and imaging.' },
+  { t: 'Smile Makeover', v: 'makeover', d: 'A planned combination of treatments—such as whitening, veneers or crowns—to improve the shape, shade and alignment of your smile.' },
+  { t: 'Root Canal Treatment', v: 'rootcanal', d: 'Removes infected or inflamed tissue from inside the tooth, cleans and seals the canals so the natural tooth can be preserved.' },
+  { t: 'Teeth Whitening', v: 'whitening', d: 'Lightens stains and discolouration for a brighter shade. Your dentist will advise on the method that suits your teeth and gums.' },
+  { t: 'Dental Crowns & Bridges', v: 'crown', d: 'Crowns cover and protect weakened teeth. Bridges replace missing teeth by anchoring to neighbouring teeth or implants.' },
+  { t: 'Dental Veneers', v: 'veneer', d: 'Thin, tooth-coloured shells bonded to the front of teeth to improve colour, shape or minor chips and gaps.' },
+  { t: 'Prosthodontic Treatment', v: 'prostho', d: 'Restoring and replacing damaged or missing teeth to rebuild comfort, function and appearance, including complex full-mouth needs.' },
+  { t: 'Tooth-Coloured Fillings', v: 'filling', d: 'Repairs cavities with a material matched to your natural tooth shade, restoring strength while blending in.' },
+  { t: 'Complete & Partial Dentures', v: 'dentures', d: 'Removable replacements for several or all missing teeth, designed for a comfortable fit, natural look and everyday function.' },
+  { t: 'Preventive & General Dental Care', v: 'preventive', d: 'Routine check-ups, cleaning and early guidance that help keep your teeth and gums healthy and catch concerns early.' }
+];
+
+const grid = document.getElementById('tgrid');
+const dlg = document.getElementById('tdlg');
+TREATMENTS.forEach(x => {
+  const b = document.createElement('button');
+  b.className = 'tcard';
+  b.type = 'button';
+  b.innerHTML = `<strong>${x.t}</strong><span>Treatment overview</span>`;
+  b.addEventListener('click', () => {
+    document.getElementById('tdlg-title').textContent = x.t;
+    document.getElementById('tdlg-text').textContent = x.d;
+    document.getElementById('tdlg-viz').innerHTML = VIZ[x.v]();
+    dlg.showModal();
+  });
+  grid.appendChild(b);
+});
+document.getElementById('tclose').addEventListener('click', () => dlg.close());
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+
+/* ---------- Before / after slider ---------- */
+const ba = document.getElementById('ba');
+const range = document.getElementById('baRange');
+const setPos = v => ba.style.setProperty('--pos', v + '%');
+range.addEventListener('input', () => setPos(range.value));
+setPos(range.value);
+</script>
+</body>
+</html>
